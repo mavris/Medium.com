@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kEv-CP-81m">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wU-Tc-Ulg">
+                                <rect key="frame" x="218" y="285" width="165" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="UZt-Cu-YOE"/>
+                                    <constraint firstAttribute="height" constant="30" id="vrW-lP-Io4"/>
+                                </constraints>
+                                <state key="normal" title="VC without Retain Cycle"/>
+                                <connections>
+                                    <segue destination="m19-6F-B7w" kind="show" id="MgO-H4-RUR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ps2-E6-Wli">
+                                <rect key="frame" x="230" y="316" width="142" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="35i-MV-1Wi"/>
+                                    <constraint firstAttribute="width" constant="142" id="nSo-kF-K8k"/>
+                                </constraints>
+                                <state key="normal" title="VC with Retain Cycle"/>
+                                <connections>
+                                    <segue destination="XU8-lq-3kj" kind="show" id="dUV-fb-gWX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3wU-Tc-Ulg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="68u-fE-CEx"/>
+                            <constraint firstItem="Ps2-E6-Wli" firstAttribute="centerX" secondItem="3wU-Tc-Ulg" secondAttribute="centerX" id="bAn-Xk-FwZ"/>
+                            <constraint firstItem="3wU-Tc-Ulg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hgY-2Z-AjW"/>
+                            <constraint firstItem="Ps2-E6-Wli" firstAttribute="top" secondItem="3wU-Tc-Ulg" secondAttribute="bottom" constant="1" id="yhM-Zn-eW6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NRK-nW-QFM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="422"/>
+        </scene>
+        <!--GCDVC-->
+        <scene sceneID="Cvk-pC-UbC">
+            <objects>
+                <viewController id="m19-6F-B7w" customClass="GCDVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SZK-NE-IEv"/>
+                        <viewControllerLayoutGuide type="bottom" id="74E-rP-i5L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mX9-E2-RiN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkZ-ec-zhP">
+                                <rect key="frame" x="210" y="285" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KnW-0Y-IGD"/>
+                                    <constraint firstAttribute="width" constant="180" id="UQ0-a0-ule"/>
+                                </constraints>
+                                <state key="normal" title="GCD Without Retain Cycle"/>
+                                <connections>
+                                    <action selector="startGCD:" destination="m19-6F-B7w" eventType="touchUpInside" id="Obp-On-804"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="c5Y-mN-SLK">
+                                <rect key="frame" x="282" y="214" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="fP6-05-rpa"/>
+                                    <constraint firstAttribute="height" constant="37" id="uqp-W0-2kg"/>
+                                </constraints>
+                                <color key="color" red="0.0" green="0.46274509800000002" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hkZ-ec-zhP" firstAttribute="centerY" secondItem="mX9-E2-RiN" secondAttribute="centerY" id="BD3-na-PKx"/>
+                            <constraint firstItem="hkZ-ec-zhP" firstAttribute="centerX" secondItem="mX9-E2-RiN" secondAttribute="centerX" id="Gge-7Z-P4x"/>
+                            <constraint firstItem="hkZ-ec-zhP" firstAttribute="top" secondItem="c5Y-mN-SLK" secondAttribute="bottom" constant="34" id="xH7-dW-yI1"/>
+                            <constraint firstItem="c5Y-mN-SLK" firstAttribute="centerX" secondItem="mX9-E2-RiN" secondAttribute="centerX" id="zzX-Za-VjX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="c5Y-mN-SLK" id="i91-xf-a2X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Prg-z7-d0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802" y="422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HWl-OM-xRo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kEv-CP-81m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Md3-iV-ALn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="v6p-TJ-v6K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rx0-Gx-wxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="227" y="429"/>
+        </scene>
+        <!--GCDVC2-->
+        <scene sceneID="1s0-G7-xO2">
+            <objects>
+                <viewController id="XU8-lq-3kj" customClass="GCDVC2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a1O-tC-nBO"/>
+                        <viewControllerLayoutGuide type="bottom" id="65P-wz-Wu1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eHd-iz-LV7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8V-gX-Gqz">
+                                <rect key="frame" x="222" y="285" width="157" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="LLN-hM-Tgn"/>
+                                    <constraint firstAttribute="height" constant="30" id="igD-9n-H2j"/>
+                                </constraints>
+                                <state key="normal" title="GCD With Retain Cycle"/>
+                                <connections>
+                                    <action selector="startGCDRetainCycle:" destination="XU8-lq-3kj" eventType="touchUpInside" id="xtk-RT-hJF"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CN9-Tl-9wr">
+                                <rect key="frame" x="282" y="214" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="31s-4r-ZDp"/>
+                                    <constraint firstAttribute="width" constant="37" id="mTT-iN-5zt"/>
+                                </constraints>
+                                <color key="color" red="0.0" green="0.46274509800000002" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A8V-gX-Gqz" firstAttribute="top" secondItem="CN9-Tl-9wr" secondAttribute="bottom" constant="34" id="0Zb-0Z-yw4"/>
+                            <constraint firstItem="A8V-gX-Gqz" firstAttribute="centerX" secondItem="eHd-iz-LV7" secondAttribute="centerX" id="REb-B3-M5d"/>
+                            <constraint firstItem="CN9-Tl-9wr" firstAttribute="centerX" secondItem="eHd-iz-LV7" secondAttribute="centerX" id="U0T-A7-4Ia"/>
+                            <constraint firstItem="A8V-gX-Gqz" firstAttribute="centerY" secondItem="eHd-iz-LV7" secondAttribute="centerY" id="w4w-qv-IN8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="CN9-Tl-9wr" id="toC-5g-7LU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IkB-8E-SgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797" y="1174"/>
+        </scene>
+    </scenes>
+</document>
