@@ -1,18 +1,13 @@
 //
-//  AppDelegate.h
+//  NSUserDefaults+MyUserDefaults.h
 //  SwizzlingTest
 //
 //  Created by Michalis Mavris on 05/07/2017.
 //  Copyright © 2017 Miksoft. All rights reserved.
 // https://github.com/mavris/Medium.com/tree/master/SwizzlingTest/SwizzlingTest
 
+#import <Foundation/Foundation.h>
 
-#import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-
+@interface NSUserDefaults (MyUserDefaults)
+-(void)mySetObject:(id)value forKey:(NSString *)defaultName;
 @end
-

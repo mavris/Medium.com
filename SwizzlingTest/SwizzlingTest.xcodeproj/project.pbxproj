@@ -12,7 +12,11 @@
 		274CB1321E0E752000781019 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274CB1301E0E752000781019 /* Main.storyboard */; };
 		274CB1341E0E752000781019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274CB1331E0E752000781019 /* Assets.xcassets */; };
 		274CB1371E0E752000781019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274CB1351E0E752000781019 /* LaunchScreen.storyboard */; };
-		274CB1401E0E754F00781019 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CB13F1E0E754F00781019 /* LoginVC.m */; };
+		27934B861F0C469800FCA401 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27934B851F0C469800FCA401 /* ViewController.m */; };
+		27934B891F0C46DC00FCA401 /* NSUserDefaults+MyUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 27934B881F0C46DC00FCA401 /* NSUserDefaults+MyUserDefaults.m */; };
+		27934B8C1F0C473B00FCA401 /* NSUserDefaults+MonitorWrites.m in Sources */ = {isa = PBXBuildFile; fileRef = 27934B8B1F0C473B00FCA401 /* NSUserDefaults+MonitorWrites.m */; };
+		27934B931F0C490900FCA401 /* SubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27934B921F0C490900FCA401 /* SubViewController.m */; };
+		27934B9B1F0C499700FCA401 /* SubViewController+ViewWillAppearLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 27934B9A1F0C499700FCA401 /* SubViewController+ViewWillAppearLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +28,16 @@
 		274CB1331E0E752000781019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		274CB1361E0E752000781019 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		274CB1381E0E752000781019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		274CB13E1E0E754F00781019 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginVC.h; path = ../LoginVC.h; sourceTree = "<group>"; };
-		274CB13F1E0E754F00781019 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVC.m; path = ../LoginVC.m; sourceTree = "<group>"; };
+		27934B841F0C469800FCA401 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		27934B851F0C469800FCA401 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		27934B871F0C46DC00FCA401 /* NSUserDefaults+MyUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+MyUserDefaults.h"; sourceTree = "<group>"; };
+		27934B881F0C46DC00FCA401 /* NSUserDefaults+MyUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+MyUserDefaults.m"; sourceTree = "<group>"; };
+		27934B8A1F0C473B00FCA401 /* NSUserDefaults+MonitorWrites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+MonitorWrites.h"; sourceTree = "<group>"; };
+		27934B8B1F0C473B00FCA401 /* NSUserDefaults+MonitorWrites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+MonitorWrites.m"; sourceTree = "<group>"; };
+		27934B911F0C490900FCA401 /* SubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubViewController.h; sourceTree = "<group>"; };
+		27934B921F0C490900FCA401 /* SubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubViewController.m; sourceTree = "<group>"; };
+		27934B991F0C499700FCA401 /* SubViewController+ViewWillAppearLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SubViewController+ViewWillAppearLog.h"; sourceTree = "<group>"; };
+		27934B9A1F0C499700FCA401 /* SubViewController+ViewWillAppearLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SubViewController+ViewWillAppearLog.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +70,10 @@
 		274CB1261E0E752000781019 /* SwizzlingTest */ = {
 			isa = PBXGroup;
 			children = (
-				274CB12A1E0E752000781019 /* AppDelegate.h */,
-				274CB12B1E0E752000781019 /* AppDelegate.m */,
-				274CB13E1E0E754F00781019 /* LoginVC.h */,
-				274CB13F1E0E754F00781019 /* LoginVC.m */,
+				27934BA01F0C4A3100FCA401 /* Categories */,
+				27934B9F1F0C4A2700FCA401 /* ViewControllers */,
+				27934B9C1F0C4A0100FCA401 /* AppDelegate */,
+				27934B901F0C48CC00FCA401 /* UIViewControllerExample */,
 				274CB1301E0E752000781019 /* Main.storyboard */,
 				274CB1331E0E752000781019 /* Assets.xcassets */,
 				274CB1351E0E752000781019 /* LaunchScreen.storyboard */,
@@ -77,6 +89,78 @@
 				274CB1281E0E752000781019 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27934B901F0C48CC00FCA401 /* UIViewControllerExample */ = {
+			isa = PBXGroup;
+			children = (
+				27934B9E1F0C4A1500FCA401 /* Swizzled Categories */,
+				27934B9D1F0C4A0B00FCA401 /* Subclasses */,
+			);
+			name = UIViewControllerExample;
+			sourceTree = "<group>";
+		};
+		27934B9C1F0C4A0100FCA401 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				274CB12A1E0E752000781019 /* AppDelegate.h */,
+				274CB12B1E0E752000781019 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		27934B9D1F0C4A0B00FCA401 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				27934B911F0C490900FCA401 /* SubViewController.h */,
+				27934B921F0C490900FCA401 /* SubViewController.m */,
+			);
+			name = Subclasses;
+			sourceTree = "<group>";
+		};
+		27934B9E1F0C4A1500FCA401 /* Swizzled Categories */ = {
+			isa = PBXGroup;
+			children = (
+				27934B991F0C499700FCA401 /* SubViewController+ViewWillAppearLog.h */,
+				27934B9A1F0C499700FCA401 /* SubViewController+ViewWillAppearLog.m */,
+			);
+			name = "Swizzled Categories";
+			sourceTree = "<group>";
+		};
+		27934B9F1F0C4A2700FCA401 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				27934B841F0C469800FCA401 /* ViewController.h */,
+				27934B851F0C469800FCA401 /* ViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		27934BA01F0C4A3100FCA401 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				27934BA21F0C4A4A00FCA401 /* Swizzled */,
+				27934BA11F0C4A3B00FCA401 /* Extensions */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		27934BA11F0C4A3B00FCA401 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27934B871F0C46DC00FCA401 /* NSUserDefaults+MyUserDefaults.h */,
+				27934B881F0C46DC00FCA401 /* NSUserDefaults+MyUserDefaults.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		27934BA21F0C4A4A00FCA401 /* Swizzled */ = {
+			isa = PBXGroup;
+			children = (
+				27934B8A1F0C473B00FCA401 /* NSUserDefaults+MonitorWrites.h */,
+				27934B8B1F0C473B00FCA401 /* NSUserDefaults+MonitorWrites.m */,
+			);
+			name = Swizzled;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,8 +194,7 @@
 				TargetAttributes = {
 					274CB1231E0E751F00781019 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = JSY962FCU8;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -151,9 +234,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27934B861F0C469800FCA401 /* ViewController.m in Sources */,
+				27934B8C1F0C473B00FCA401 /* NSUserDefaults+MonitorWrites.m in Sources */,
 				274CB12C1E0E752000781019 /* AppDelegate.m in Sources */,
+				27934B931F0C490900FCA401 /* SubViewController.m in Sources */,
+				27934B891F0C46DC00FCA401 /* NSUserDefaults+MyUserDefaults.m in Sources */,
+				27934B9B1F0C499700FCA401 /* SubViewController+ViewWillAppearLog.m in Sources */,
 				274CB1291E0E752000781019 /* main.m in Sources */,
-				274CB1401E0E754F00781019 /* LoginVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,11 +358,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JSY962FCU8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwizzlingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miksoft.SwizzlingTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -283,11 +371,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JSY962FCU8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwizzlingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miksoft.SwizzlingTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -310,6 +399,7 @@
 				274CB13D1E0E752000781019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

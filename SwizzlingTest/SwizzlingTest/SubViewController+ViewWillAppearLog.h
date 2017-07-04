@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  SubViewController+ViewWillAppearLog.h
 //  SwizzlingTest
 //
 //  Created by Michalis Mavris on 05/07/2017.
@@ -7,12 +7,8 @@
 // https://github.com/mavris/Medium.com/tree/master/SwizzlingTest/SwizzlingTest
 
 
-#import <UIKit/UIKit.h>
+#import "SubViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface SubViewController (ViewWillAppearLog)
 
 @end
-

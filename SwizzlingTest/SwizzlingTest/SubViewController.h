@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  SubViewController.h
 //  SwizzlingTest
 //
 //  Created by Michalis Mavris on 05/07/2017.
@@ -9,10 +9,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface SubViewController : UIViewController
 
 @end
-

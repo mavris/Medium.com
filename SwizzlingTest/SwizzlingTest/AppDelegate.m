@@ -2,9 +2,9 @@
 //  AppDelegate.m
 //  SwizzlingTest
 //
-//  Created by Michalis Mavris on 24/12/2016.
-//  Copyright © 2016 Miksoft. All rights reserved.
-//
+//  Created by Michalis Mavris on 05/07/2017.
+//  Copyright © 2017 Miksoft. All rights reserved.
+// https://github.com/mavris/Medium.com/tree/master/SwizzlingTest/SwizzlingTest
 
 #import "AppDelegate.h"
 
